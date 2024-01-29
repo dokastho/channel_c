@@ -6,26 +6,31 @@
 
 #define DEFAULT_QUEUE_LEN 100
 
+// type of queue
+typedef int queue_value_t;
+
 struct queue_t
 {
-    int data[DEFAULT_QUEUE_LEN] = {0};
-    int* begin = data;
-    int* end = begin;
-    int len = 100;
+    queue_value_t data[DEFAULT_QUEUE_LEN];
+    int* begin;
+    int* end;
 };
 typedef struct queue_t queue_t;
 
 void
-enqueue(queue_t*, int);
+queue_init(queue_t*);
 
-int
+void
+enqueue(queue_t*, queue_value_t);
+
+queue_value_t
 dequeue(queue_t*);
 
 size_t
-size();
+queue_size(queue_t*);
 
 int
-empty();
+queue_empty(queue_t*);
 
 #endif
 // #endif

@@ -13,15 +13,18 @@ struct channel_t
 typedef struct channel_t channel_t;
 
 void
-push(int);
+chan_init(channel_t*);
+
+void
+chan_push(channel_t*, int);
 
 int
-pop(int);
+chan_pop(channel_t*, int);
 
 size_t
-size();
+chan_size(channel_t*);
 
 int
-empty();
+chan_empty(channel_t*);
 
 #endif

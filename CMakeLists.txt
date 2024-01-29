@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(channel_c)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/home/dokastho/code/pthread_sandbox/bin")
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/home/dokastho/code/pthread_sandbox/bin")
 
 set(CMAKE_C_COMPILER, "clang")
 
