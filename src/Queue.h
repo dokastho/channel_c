@@ -14,6 +14,8 @@ struct queue_t
     queue_value_t data[DEFAULT_QUEUE_LEN];
     int* begin;
     int* end;
+    int* UPPER_BOUND;
+    int size;
 };
 typedef struct queue_t queue_t;
 
